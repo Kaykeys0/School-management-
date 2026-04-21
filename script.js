@@ -95,6 +95,31 @@ function renderApp() {
         const row = document.createElement('tr');
         row.className = `border-b hover:bg-gray-50 ${index === 0 ? 'student-rank-1' : ''}`;
         row.innerHTML = `
+        function updateTable(students) {
+    const tableBody = document.querySelector('#results-table tbody');
+    tableBody.innerHTML = '';
+
+    students.forEach((s, index) => {
+        const row = document.createElement('tr');
+        
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${s.name}</td>
+            <td>${s.marks.math}</td>
+            <td>${s.marks.science}</td>
+            <td>${s.marks.english}</td>
+            <td>${s.marks.history}</td>
+            <td>${s.marks.geography}</td>
+            <td>${s.total}</td>
+            <td>${s.average}%</td>
+            <td>
+                <button class="print-btn" onclick="printStudentReport(${index})">Print Report</button>
+            </td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
             <td class="p-4 font-bold text-blue-600">#${index + 1}</td>
             <td class="p-4 font-medium">${s.name}</td>
             <td class="p-4">${s.total} / 500</td>
