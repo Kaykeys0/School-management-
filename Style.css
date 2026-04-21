@@ -1,0 +1,23 @@
+/* Custom smooth transitions */
+#login-section, #dashboard-section {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Specific styling for printing the report */
+@media print {
+    #login-section, #student-form, #logout-btn, .bg-gray-200, th:last-child, td:last-child {
+        display: none !important;
+    }
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+    #dashboard-section {
+        display: block !important;
+    }
+}
+
+.student-rank-1 {
+    background-color: #fef3c7; /* Gold tint for top student */
+}
+
