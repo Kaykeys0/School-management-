@@ -10,6 +10,7 @@ const dashboardSection = document.getElementById('dashboard-section');
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    alert('login function triggered');
     const user = document.getElementById('username').value;
     const pass = document.getElementById('password').value;
 
