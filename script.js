@@ -1,3 +1,4 @@
+alert('script file loaded');
 // --- STATE MANAGEMENT ---
 let students = JSON.parse(localStorage.getItem('studentData')) || [];
 let myChart = null;
